@@ -4,7 +4,7 @@ import { Provider } from 'react-redux'
 import thunk from 'redux-thunk';
 import rootReducer from './reducers/rootReducer';
 import { createStore, applyMiddleware } from 'redux';
-import App from './App'
+import Playertracker from './Playertracker'
 
 const store = createStore(
     rootReducer,
@@ -13,7 +13,7 @@ const store = createStore(
 
 render(
   <Provider store={store}>
-    <App />
+    <Playertracker />
   </Provider>,
   document.getElementById('root')
 );
