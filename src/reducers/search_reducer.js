@@ -1,13 +1,16 @@
-export default (state = {
-  loading: false,
-  players: [],
-  error: null
-}, action) => {
+export default (
+  state = {
+    loading: false,
+    players: [],
+    error: null
+  },
+  action
+) => {
   switch (action.type) {
     case 'FETCH_PLAYERS_REQUEST':
-      return { 
+      return {
         ...state,
-        loading: true 
+        loading: true
       }
     case 'FETCH_PLAYERS_OK':
       return {
