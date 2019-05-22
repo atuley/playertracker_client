@@ -5,7 +5,7 @@ const Search = ({ players }) => {
     <>
       <input className='search__field'></input>
       {players.slice(0, 5).map(player => 
-        <p key={player.id}>{player.firstName}</p>
+        <p key={player.id}>{player.firstName} {player.lastName}</p>
       )}
     </>
   );
