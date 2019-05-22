@@ -1,6 +1,14 @@
 import React from 'react';
 
-const Search = () =>
-  <><input className='search__field'></input></>;
+const Search = ({ players }) => {
+  return (
+    <>
+      <input className='search__field'></input>
+      {players.slice(0, 5).map(player => 
+        <p key={player.id}>{player.firstName}</p>
+      )}
+    </>
+  );
+}
 
 export default Search;

@@ -1,20 +1,24 @@
 export default (state = {
   loading: false,
-  players: {},
+  players: [],
   error: null
 }, action) => {
   switch (action.type) {
     case 'FETCH_PLAYERS_REQUEST':
-      return { loading: true }
+      return { 
+        ...state,
+        loading: true 
+      }
     case 'FETCH_PLAYERS_OK':
       return {
+        ...state,
         loading: false,
         players: action.payload
       }
     case 'FETCH_PLAYERS_ERROR':
       return {
-        loading: false,
-        error: 'you fucked up'
+        ...state,
+        loading: false
       }
     default:
       return state
