@@ -5,7 +5,7 @@ import { fetchPlayers } from '../actions/index'
 
 class SearchContainer extends Component {
   componentDidMount() {
-    this.props.dispatch(fetchPlayers())
+    this.props.fetchPlayers()
   }
 
   render() {
@@ -17,4 +17,7 @@ const mapStateToProps = state => ({
   players: state.searchReducer.players
 })
 
-export default connect(mapStateToProps)(SearchContainer)
+export default connect(
+  mapStateToProps,
+  { fetchPlayers }
+)(SearchContainer)

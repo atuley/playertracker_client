@@ -4,11 +4,15 @@ const Search = ({ players }) => {
   return (
     <>
       <input className="search__field" />
-      {players.slice(0, 5).map(player => (
-        <p key={player.id}>
-          {player.firstName} {player.lastName}
-        </p>
-      ))}
+      <table>
+        <tbody>
+          {players.slice(0, 10).map(player => (
+            <tr key={player.id}>
+              <td>{player.firstName}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </>
   )
 }

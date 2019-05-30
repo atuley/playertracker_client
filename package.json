@@ -20,5 +20,8 @@
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
     "sass": "^1.19.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.11"
   }
 }
