@@ -2,7 +2,6 @@ export default (
   state = {
     loading: false,
     players: [],
-    searchResults: [],
     error: null
   },
   action
@@ -22,12 +21,6 @@ export default (
     case 'FETCH_PLAYERS_ERROR':
       return {
         ...state,
-        loading: false
-      }
-    case 'SEARCH_PLAYERS':
-      return {
-        ...state,
-        searchResults: action.payload,
         loading: false
       }
     default:

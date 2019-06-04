@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { search } from '../utils'
 
-const Search = ({ players, searchResults, searchPlayers }) => {
+const Search = ({ players }) => {
+  const [searchResults, setSearchResults] = useState([])
   return (
     <>
       <input
         className="search__field"
-        onChange={e => searchPlayers(e, players)}
+        onChange={e => setSearchResults(search(e.target.value, players))}
       />
       <table className="search__results">
         <tbody>

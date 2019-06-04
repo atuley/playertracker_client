@@ -1,5 +1,3 @@
-import { search } from '../utils'
-
 export const fetchPlayers = () => dispatch => {
   dispatch({ type: 'FETCH_PLAYERS_REQUEST' })
   fetch('http://localhost:4000/api/players')
@@ -13,15 +11,4 @@ export const fetchPlayers = () => dispatch => {
     .catch(() => {
       dispatch({ type: 'FETCH_PLAYERS_ERROR' })
     })
-}
-
-export const searchPlayers = (e, players) => dispatch => {
-  const query = e.target.value
-  const searchQuery = query.toLowerCase()
-  const result = search(searchQuery, players)
-
-  dispatch({
-    type: 'SEARCH_PLAYERS',
-    payload: result
-  })
 }
