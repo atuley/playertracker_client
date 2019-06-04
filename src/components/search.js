@@ -2,7 +2,7 @@ import React from 'react'
 
 const Search = ({ handlePlayerSearch, searchResults }) => {
   return (
-    <>
+    <div className="search">
       <input className="search__field" onChange={handlePlayerSearch} />
       <table className="search__results">
         <tbody>
@@ -13,7 +13,7 @@ const Search = ({ handlePlayerSearch, searchResults }) => {
           ))}
         </tbody>
       </table>
-    </>
+    </div>
   )
 }
 
