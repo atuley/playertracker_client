@@ -1,4 +1,5 @@
 import React from 'react'
+import SearchResult from './search_result'
 
 const Search = ({ handlePlayerSearch, searchResults }) => {
   return (
@@ -7,9 +8,7 @@ const Search = ({ handlePlayerSearch, searchResults }) => {
       <table className="search__results">
         <tbody>
           {searchResults.map(player => (
-            <tr key={player.id}>
-              <td>{player.firstName + ' ' + player.lastName}</td>
-            </tr>
+            <SearchResult key={player.id} player={player} />
           ))}
         </tbody>
       </table>
