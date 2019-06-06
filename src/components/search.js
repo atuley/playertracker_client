@@ -4,7 +4,11 @@ import SearchResult from './search_result'
 const Search = ({ handlePlayerSearch, searchResults }) => {
   return (
     <div className="search">
-      <input className="search__field" onChange={handlePlayerSearch} />
+      <input
+        placeholder="Search"
+        className="search__field"
+        onChange={handlePlayerSearch}
+      />
       <table className="search__results">
         <tbody>
           {searchResults.map(player => (

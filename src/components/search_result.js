@@ -8,6 +8,9 @@ const SearchResult = ({ player }) => {
       <td>{`${firstName} ${lastName}`}</td>
       <td>{number}</td>
       <td>{position}</td>
+      <td>
+        <button className="follow-btn">Follow</button>
+      </td>
     </tr>
   )
 }

@@ -1,1 +1,31 @@
 /* Placeholder */
+input {
+  padding: 0;
+  border-width: inherit;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.search {
+  &__field {
+    border: 1px solid grey;
+    border-radius: 15px;
+    height: 40px;
+    padding-left: 20px;
+    width: 100%;
+  }
+
+  &__results {
+    width: 100%;
+  }
+}
+
+.search-result {
+  height: 40px;
+}
+
+.follow-btn {
+  background-color: grey;
+}
