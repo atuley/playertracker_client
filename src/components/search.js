@@ -6,10 +6,10 @@ const Search = ({ handlePlayerSearch, searchResults }) => {
     <div className="search">
       <input
         placeholder="Search"
-        className="search__field"
+        className={`search__field ${searchResults.length && 'display-results'}`}
         onChange={handlePlayerSearch}
       />
-      <table className="search__results">
+      <table className="search__results" cellPadding="0" cellSpacing="0">
         <tbody>
           {searchResults.map(player => (
             <SearchResult key={player.id} player={player} />

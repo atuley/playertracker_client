@@ -5,10 +5,13 @@ const SearchResult = ({ player }) => {
 
   return (
     <tr className="search-result">
-      <td>{`${firstName} ${lastName}`}</td>
-      <td>{number}</td>
-      <td>{position}</td>
-      <td>
+      <td className="search-result__col u-border-left">
+        <span className="u-block">{`${firstName} ${lastName}`}</span>
+        <span className="u-block">
+          #{number} | {position}
+        </span>
+      </td>
+      <td className="search-result__col u-border-right">
         <button className="follow-btn">Follow</button>
       </td>
     </tr>
