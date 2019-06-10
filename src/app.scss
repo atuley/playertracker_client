@@ -4,6 +4,7 @@ $primary-grey: #2d2d2d;
 /* ELEMENTS */
 body {
   background-color: $primary-grey;
+  font-family: 'Roboto', sans-serif;
 }
 
 input {
@@ -22,7 +23,6 @@ table {
 /* BLOCKS */
 .search {
   &__field {
-    border: 1px solid black;
     border-radius: 10px;
     height: 40px;
     padding-left: 20px;
@@ -72,7 +72,7 @@ table {
   display: block;
 }
 
-.display-results {
+.u-display-results {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
