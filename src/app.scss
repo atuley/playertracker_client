@@ -1,5 +1,7 @@
 /* VARIABLES */
 $primary-grey: #2d2d2d;
+$primary-blue: #3375b1;
+$secondary-blue: #245582;
 
 /* ELEMENTS */
 body {
@@ -48,14 +50,30 @@ table {
   color: white;
   height: 50px;
 
-  &__col {
-    border-bottom: 1px solid black;
+  td {
     padding: 10px;
+  }
+
+  &__action {
+    align-items: center;
+    display: flex;
+    height: 50px;
+    justify-content: flex-end;
+    min-height: 50px;
   }
 }
 
-.follow-btn {
-  background-color: grey;
+.primary-btn {
+  background-color: $primary-blue;
+  border: none;
+  border-radius: 100px;
+  color: white;
+  height: 32px;
+  font-size: 14px;
+  font-weight: 200;
+  min-width: 75px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 /* UTILS */
