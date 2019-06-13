@@ -24,7 +24,7 @@ const SearchResult = ({ player }) => {
           />
           <div className="u-ml-8">
             <span className="u-block">{`${firstName} ${lastName}`}</span>
-            <span className="u-block">
+            <span className="search-result__pos u-block ">
               #{number} | {position}
             </span>
           </div>

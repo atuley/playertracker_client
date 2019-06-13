@@ -1,5 +1,6 @@
 /* VARIABLES */
 $primary-grey: #2d2d2d;
+$secondary-grey: #e0e0e0;
 $primary-blue: #3375b1;
 $secondary-blue: #245582;
 
@@ -7,6 +8,7 @@ $secondary-blue: #245582;
 body {
   background-color: $primary-grey;
   font-family: 'Roboto', sans-serif;
+  font-size: 16px;
 }
 
 input {
@@ -24,8 +26,9 @@ table {
 
 /* BLOCKS */
 .search {
-  width: 1000px;
+  margin: auto;
   max-width: 1000px;
+
   &__field {
     border-radius: 10px;
     height: 40px;
@@ -34,7 +37,6 @@ table {
   }
 
   &__results {
-    background-color: $primary-grey;
     width: 100%;
 
     tr:last-child {
@@ -71,6 +73,13 @@ table {
   &__player-image {
     border-radius: 50%;
     height: 50px;
+  }
+
+  &__pos {
+    font-size: 14px;
+    font-weight: 200;
+    margin-top: 2px;
+    color: $secondary-grey;
   }
 
   &__team-logo {
