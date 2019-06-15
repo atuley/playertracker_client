@@ -1,5 +1,5 @@
 import React from 'react'
-import { getPlayerImage, getTeamImage } from '../actions'
+import { getPlayerImage, getTeamImage } from '../utils'
 
 const SearchResult = ({ player }) => {
   const { firstName, lastName, number, position, teamColor } = player
