@@ -1,13 +1,12 @@
 import React from 'react'
-import { getPlayerImage, getTeamImage } from '../utils'
+import { getPlayerImage, getTeamImage, hex2rgba } from '../utils'
 
 const SearchResult = ({ player }) => {
   const { firstName, lastName, number, position, teamColor } = player
   const teamGradient = {
-    background: `linear-gradient(to right, 
-      rgba(255,0,0,0) 0%,
-      ${teamColor} 250%)`
+    backgroundColor: hex2rgba(teamColor, 0.3)
   }
+
   return (
     <tr className="search-result" style={teamGradient}>
       <td className="search-result__player-image-wrapper">

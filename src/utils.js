@@ -18,3 +18,8 @@ export const getPlayerImage = player =>
 
 export const getTeamImage = player =>
   `https://www.nba.com/assets/logos/teams/primary/web/${player.tricode}.svg`
+
+export const hex2rgba = (hex, alpha = 1) => {
+  const [r, g, b] = hex.match(/\w\w/g).map(x => parseInt(x, 16))
+  return `rgba(${r},${g},${b},${alpha})`
+}
