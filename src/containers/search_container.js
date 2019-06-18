@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Search from '../components/search'
-import { fetchPlayers } from '../actions/index'
+import { fetchPlayers } from '../actions/search_actions'
 import { search } from '../utils'
 
 class SearchContainer extends Component {

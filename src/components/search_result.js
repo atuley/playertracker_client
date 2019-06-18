@@ -29,7 +29,7 @@ const SearchResult = ({ player }) => {
           </div>
         </div>
       </td>
-      <td className="search-result__action">
+      <td className="search-result__follow-btn">
         <button className="primary-btn">Follow</button>
       </td>
     </tr>
