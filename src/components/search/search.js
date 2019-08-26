@@ -13,7 +13,7 @@ const Search = ({ handlePlayerSearch, searchResults }) => {
       <table className="search__results" cellPadding="0" cellSpacing="0">
         <tbody>
           {searchResults.map(player => (
-            <SearchResult key={player.id} player={player} />
+            <SearchResult key={player.id} {...player} />
           ))}
         </tbody>
       </table>
