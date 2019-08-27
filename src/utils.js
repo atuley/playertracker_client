@@ -11,13 +11,11 @@ export const search = (searchQuery, players) => {
   )
 }
 
-export const getPlayerImage = player =>
-  `https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/${
-    player.id
-  }.png`
+export const getPlayerImage = id =>
+  `https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/${id}.png`
 
-export const getTeamImage = player =>
-  `https://www.nba.com/assets/logos/teams/primary/web/${player.tricode}.svg`
+export const getTeamImage = tricode =>
+  `https://www.nba.com/assets/logos/teams/primary/web/${tricode}.svg`
 
 export const hex2rgba = (hex, alpha = 1) => {
   const [r, g, b] = hex.match(/\w\w/g).map(x => parseInt(x, 16))

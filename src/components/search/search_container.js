@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import Search from '../components/search'
-import { fetchPlayers } from '../actions/search_actions'
-import { search } from '../utils'
+import Search from './search'
+import { fetchPlayers } from '../../actions/search_actions'
+import { search } from '../../utils'
 
 class SearchContainer extends Component {
   constructor(props) {
@@ -14,7 +14,7 @@ class SearchContainer extends Component {
   }
 
   componentDidMount() {
-    this.props.dispatch(fetchPlayers())
+    this.props.fetchPlayers()
   }
 
   handlePlayerSearch(e) {
@@ -38,4 +38,4 @@ const mapStateToProps = state => ({
   players: state.searchReducer.players
 })
 
-export default connect(mapStateToProps)(SearchContainer)
+export default connect(mapStateToProps, { fetchPlayers })(SearchContainer)
