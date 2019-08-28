@@ -1,18 +1,23 @@
 import React from 'react'
 import { getPlayerImage, getTeamImage, hex2rgba } from '../../utils'
 
-const SearchResult = ({ id, tricode, firstName, lastName, number, position, teamColor }) => {
+const SearchResult = ({
+  id,
+  tricode,
+  firstName,
+  lastName,
+  number,
+  position,
+  teamColor
+}) => {
   const teamGradient = {
-    backgroundColor: hex2rgba("#dddddd", 0.3)
+    backgroundColor: hex2rgba(teamColor, 0.3)
   }
 
   return (
     <tr className="search-result" style={teamGradient}>
       <td className="search-result__player-image-wrapper">
-        <img
-          className="search-result__player-image"
-          src={getPlayerImage(id)}
-        />
+        <img className="search-result__player-image" src={getPlayerImage(id)} />
       </td>
       <td className="search-result__badge">
         <div className="u-flex">
