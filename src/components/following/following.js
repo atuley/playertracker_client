@@ -1,5 +1,5 @@
 import React from 'react'
-import PlayerCard from '../player_card'
+import PlayerCard from '../player/player_card'
 
 const Following = ({ following }) =>
   following.map(player => <PlayerCard key={player.id} player={player} />)

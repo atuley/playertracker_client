@@ -1,9 +1,12 @@
 import React from 'react'
-import { getPlayerImage } from '../utils'
+import { getPlayerImage, hex2rgba } from '../../utils'
 import NameBadge from './name_badge'
 
 const PlayerCard = ({ player }) => (
-  <div className="player-card">
+  <div
+    className="player-card"
+    style={{ backgroundColor: hex2rgba(player.teamColor, 0.3) }}
+  >
     <div className="player-card__image-wrapper">
       <img className="player-card__image" src={getPlayerImage(player.id)} />
     </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { getTeamImage } from '../utils'
+import { getTeamImage } from '../../utils'
 
 const NameBadge = ({ firstName, lastName, number, position, tricode }) => (
   <div className="name-badge">
