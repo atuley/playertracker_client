@@ -8,7 +8,8 @@ const SearchResult = ({
   lastName,
   number,
   position,
-  teamColor
+  teamColor,
+  fetchStats
 }) => {
   const teamGradient = {
     backgroundColor: hex2rgba(teamColor, 0.3)
@@ -34,7 +35,12 @@ const SearchResult = ({
         </div>
       </td>
       <td className="search-result__follow-btn">
-        <button className="primary-btn">Follow</button>
+        <button
+          className={`primary-btn qa-follow-${id}`}
+          onClick={() => fetchStats(id)}
+        >
+          Follow
+        </button>
       </td>
     </tr>
   )
