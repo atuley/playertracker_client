@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
 import Search from './search'
-import { fetchPlayers, fetchStats } from '../../actions/search_actions'
+import { fetchPlayers, fetchStats } from '../../actions'
 import { search } from '../../utils'
 
 class SearchContainer extends Component {
@@ -36,7 +36,7 @@ class SearchContainer extends Component {
 }
 
 const mapStateToProps = state => ({
-  players: state.searchReducer.players
+  players: state.rootReducer.players
 })
 
 export default connect(

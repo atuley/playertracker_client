@@ -1,4 +1,6 @@
-export default (
+import { combineReducers } from 'redux'
+
+const rootReducer = (
   state = {
     loading: false,
     players: [],
@@ -44,3 +46,5 @@ export default (
       return state
   }
 }
+
+export default combineReducers({ rootReducer })
