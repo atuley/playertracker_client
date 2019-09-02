@@ -1,43 +1,27 @@
 import React from 'react'
-import { getPlayerImage, getTeamImage, hex2rgba } from '../../utils'
+import { getPlayerImage, hex2rgba } from '../../utils'
+import NameBadge from '../name_badge'
 
-const SearchResult = ({
-  id,
-  tricode,
-  firstName,
-  lastName,
-  number,
-  position,
-  teamColor,
-  fetchStats
-}) => {
+const SearchResult = ({ player, fetchStats }) => {
   const teamBackgroundColor = {
-    backgroundColor: hex2rgba(teamColor, 0.3)
+    backgroundColor: hex2rgba(player.teamColor, 0.3)
   }
 
   return (
     <tr className="search-result" style={teamBackgroundColor}>
       <td className="search-result__player-image-wrapper">
-        <img className="search-result__player-image" src={getPlayerImage(id)} />
+        <img
+          className="search-result__player-image"
+          src={getPlayerImage(player.id)}
+        />
       </td>
       <td className="search-result__badge">
-        <div className="u-flex">
-          <img
-            className="search-result__team-logo"
-            src={getTeamImage(tricode)}
-          />
-          <div className="u-ml-8">
-            <span className="u-block">{`${firstName} ${lastName}`}</span>
-            <span className="search-result__pos u-block ">
-              #{number} | {position}
-            </span>
-          </div>
-        </div>
+        <NameBadge {...player} />
       </td>
       <td className="search-result__follow-btn">
         <button
-          className={`primary-btn qa-follow-${id}`}
-          onClick={() => fetchStats(id)}
+          className={`primary-btn qa-follow-${player.id}`}
+          onClick={() => fetchStats(player.id)}
         >
           Follow
         </button>

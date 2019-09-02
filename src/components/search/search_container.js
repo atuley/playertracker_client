@@ -27,9 +27,9 @@ class SearchContainer extends Component {
   render() {
     return (
       <Search
+        {...this.props}
         handlePlayerSearch={this.handlePlayerSearch}
         searchResults={this.state.searchResults}
-        fetchStats={this.props.fetchStats}
       />
     )
   }
