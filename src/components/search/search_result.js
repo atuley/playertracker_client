@@ -11,12 +11,12 @@ const SearchResult = ({
   teamColor,
   fetchStats
 }) => {
-  const teamGradient = {
+  const teamBackgroundColor = {
     backgroundColor: hex2rgba(teamColor, 0.3)
   }
 
   return (
-    <tr className="search-result" style={teamGradient}>
+    <tr className="search-result" style={teamBackgroundColor}>
       <td className="search-result__player-image-wrapper">
         <img className="search-result__player-image" src={getPlayerImage(id)} />
       </td>
