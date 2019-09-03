@@ -8,7 +8,11 @@ class FollowingContainer extends Component {
   }
 
   render() {
-    return <Following {...this.props} />
+    return (
+      <div className="following-container">
+        <Following {...this.props} />
+      </div>
+    )
   }
 }
 
