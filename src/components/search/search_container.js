@@ -20,6 +20,7 @@ class SearchContainer extends Component {
   handlePlayerSearch(e) {
     const { players } = this.props
     this.setState({
+      ...this.state,
       searchResults: search(e.target.value, players)
     })
   }

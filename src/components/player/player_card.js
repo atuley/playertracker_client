@@ -4,7 +4,7 @@ import NameBadge from './name_badge'
 
 const PlayerCard = ({ player }) => (
   <div
-    className="player-card"
+    className={`player-card qa-details-${player.id}`}
     style={{ backgroundColor: hex2rgba(player.teamColor, 0.3) }}
   >
     <div className="player-card__image-wrapper">
