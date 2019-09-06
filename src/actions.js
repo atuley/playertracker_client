@@ -12,12 +12,12 @@ export const fetchPlayers = () => dispatch => {
       dispatch({ type: 'FETCH_PLAYERS_ERROR' })
     })
 }
-export const fetchStats = id => dispatch => {
+export const fetchStats = ids => dispatch => {
   dispatch({ type: 'FETCH_STATS_REQUEST' })
   fetch('http://localhost:4000/api/details', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ ids: [id] })
+    body: JSON.stringify({ ids })
   })
     .then(response => response.json())
     .then(details => {

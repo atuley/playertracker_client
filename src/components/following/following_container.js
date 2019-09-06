@@ -1,10 +1,16 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Following from './following'
+import { fetchStats } from '../../actions'
 
 class FollowingContainer extends Component {
   constructor(props) {
     super(props)
+  }
+
+  componentDidMount() {
+    const ids = JSON.parse(localStorage.getItem('following'))
+    ids && this.props.fetchStats(ids)
   }
 
   render() {
@@ -22,5 +28,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  null
+  { fetchStats }
 )(FollowingContainer)

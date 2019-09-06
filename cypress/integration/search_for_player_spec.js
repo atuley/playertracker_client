@@ -12,5 +12,10 @@ describe('Player Search -- ', function() {
     cy.get('.qa-follow-201939').click()
     cy.wait(1000)
     expect(cy.get('.qa-details-201939'))
+
+    // Persists changes to localStorage
+    cy.reload()
+    cy.wait(1000)
+    expect(cy.get('.qa-details-201939'))
   })
 })

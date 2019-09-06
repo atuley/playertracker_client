@@ -1,5 +1,5 @@
 import React from 'react'
-import { getPlayerImage, hex2rgba } from '../../utils'
+import { getPlayerImage, hex2rgba, setPlayerCache } from '../../utils'
 import NameBadge from '../player/name_badge'
 
 const SearchResult = ({ player, fetchStats }) => (
@@ -21,7 +21,10 @@ const SearchResult = ({ player, fetchStats }) => (
     <td className="search-result__follow-btn">
       <button
         className={`primary-btn qa-follow-${player.id}`}
-        onClick={() => fetchStats(player.id)}
+        onClick={() => {
+          setPlayerCache(player.id)
+          fetchStats([player.id])
+        }}
       >
         Follow
       </button>
