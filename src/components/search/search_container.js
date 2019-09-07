@@ -5,19 +5,15 @@ import { fetchPlayers, fetchStats } from '../../actions'
 import { search } from '../../utils'
 
 class SearchContainer extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      searchResults: []
-    }
-    this.handlePlayerSearch = this.handlePlayerSearch.bind(this)
+  state = {
+    searchResults: []
   }
 
-  componentDidMount() {
+  componentDidMount = () => {
     this.props.fetchPlayers()
   }
 
-  handlePlayerSearch(e) {
+  handlePlayerSearch = e => {
     const { players } = this.props
     this.setState({
       ...this.state,
