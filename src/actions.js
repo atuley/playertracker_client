@@ -30,3 +30,7 @@ export const fetchStats = ids => dispatch => {
       dispatch({ type: 'FETCH_STATS_ERROR' })
     })
 }
+export const unfollowPlayer = (id, currentFollowing) => dispatch => {
+  const updatedFollowing = currentFollowing.filter(player => player.id !== id)
+  dispatch({ type: 'UNFOLLOW_PLAYER', payload: updatedFollowing })
+}

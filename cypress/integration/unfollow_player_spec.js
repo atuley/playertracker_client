@@ -7,6 +7,6 @@ describe('Unfollow Player -- ', function() {
     cy.wait(1000)
     expect(cy.get('.qa-details-201939'))
     cy.get('.qa-x-201939').click()
-    expect(!cy.get('.qa-details-201939'))
+    cy.get('.qa-details-201939').should('not.exist')
   })
 })

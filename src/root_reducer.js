@@ -42,6 +42,11 @@ const rootReducer = (
         ...state,
         loading: false
       }
+    case 'UNFOLLOW_PLAYER':
+      return {
+        ...state,
+        following: action.payload
+      }
     default:
       return state
   }
