@@ -21,11 +21,26 @@ class SearchContainer extends Component {
     })
   }
 
+  handleFollow = id => {
+    const { searchResults } = this.state
+    const updatedPlayers = searchResults.map(player => {
+      if (player.id == id) {
+        player.isFollowing = true
+      }
+      return player
+    })
+    this.setState({
+      ...this.state,
+      searchResults: updatedPlayers
+    })
+  }
+
   render() {
     return (
       <Search
         {...this.props}
         handlePlayerSearch={this.handlePlayerSearch}
+        handleFollow={this.handleFollow}
         searchResults={this.state.searchResults}
       />
     )
