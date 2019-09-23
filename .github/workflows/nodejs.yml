@@ -23,8 +23,6 @@ jobs:
           npm test
       - name: Run feature tests
         run: |
-          npm install
-          npm run build --if-present
           npm test:feature
         env:
           CI: true
