@@ -1,5 +1,5 @@
 describe('Follow Player -- ', function() {
-  it('Pressing following inside of search results follows the player', function() {
+  it.skip('Pressing following inside of search results follows the player', function() {
     cy.visit('/')
     cy.wait(1000)
     cy.get('.search__field').type('ste')
