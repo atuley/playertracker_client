@@ -2,17 +2,11 @@ import React from 'react'
 import { getPlayerImage, hex2rgba } from '../../utils'
 import NameBadge from './name_badge'
 
-const PlayerCard = ({ player, handleUnfollow }) => (
+const PlayerCard = ({ player }) => (
   <div
     className={`player-card qa-details-${player.id}`}
     style={{ backgroundColor: hex2rgba(player.teamColor, 0.4) }}
   >
-    <div
-      className={`qa-x-${player.id}`}
-      onClick={() => handleUnfollow(player.id)}
-    >
-      X
-    </div>
     <div className="player-card__image-wrapper">
       <img className="player-card__image" src={getPlayerImage(player.id)} />
     </div>
