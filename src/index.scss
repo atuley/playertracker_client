@@ -89,9 +89,9 @@ table {
 
 .player-card {
   border-radius: 10px;
-  margin-top: 8px;
+  box-sizing: initial;
+  margin: 10px auto auto auto;
   padding: 10px;
-  width: 400px;
 
   &__image-wrapper {
     display: inline-block;
@@ -104,10 +104,6 @@ table {
   &__stats {
     color: white;
     display: inline-block;
-  }
-  &__wrapper {
-    display: inline-block;
-    padding-right: 8px;
   }
 }
 
@@ -129,7 +125,6 @@ table {
 }
 
 .following-container {
-  margin: auto;
   max-width: 2000px;
 }
 

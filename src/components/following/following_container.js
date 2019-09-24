@@ -22,8 +22,10 @@ class FollowingContainer extends Component {
 
   render() {
     return (
-      <div className="following-container">
-        <Following {...this.props} handleUnfollow={this.handleUnfollow} />
+      <div className="following-container container">
+        <div className="row">
+          <Following {...this.props} handleUnfollow={this.handleUnfollow} />
+        </div>
       </div>
     )
   }

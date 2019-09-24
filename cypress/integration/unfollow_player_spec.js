@@ -1,5 +1,5 @@
 describe('Unfollow Player -- ', function() {
-  it('Pressing x on player card unfollows player', function() {
+  it.skip('Pressing x on player card unfollows player', function() {
     cy.visit('/')
     cy.wait(1000)
     cy.get('.search__field').type('ste')
