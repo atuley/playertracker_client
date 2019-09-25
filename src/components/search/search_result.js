@@ -2,7 +2,7 @@ import React from 'react'
 import { getPlayerImage, hex2rgba, setPlayerCache } from '../../utils'
 import NameBadge from '../player/name_badge'
 
-const SearchResult = ({ player, fetchStats }) => (
+const SearchResult = ({ player, fetchStats, handleUnfollow }) => (
   <tr
     className="search-result"
     style={{
@@ -23,10 +23,14 @@ const SearchResult = ({ player, fetchStats }) => (
         className={`primary-btn qa-follow-${player.id}`}
         onClick={() => {
           setPlayerCache(player.id)
-          fetchStats([player.id])
+          if (!player.isFollowing) {
+            fetchStats([player.id])
+          } else {
+            handleUnfollow(player.id)
+          }
         }}
       >
-        Follow
+        {player.isFollowing ? 'Unfollow' : 'Follow'}
       </button>
     </td>
   </tr>

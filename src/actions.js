@@ -5,7 +5,7 @@ export const fetchPlayers = () => dispatch => {
     .then(players =>
       dispatch({
         type: 'FETCH_PLAYERS_OK',
-        payload: players.players
+        payload: updateResults(players.players)
       })
     )
     .catch(() => {
@@ -33,4 +33,15 @@ export const fetchStats = ids => dispatch => {
 export const unfollowPlayer = (id, currentFollowing) => dispatch => {
   const updatedFollowing = currentFollowing.filter(player => player.id !== id)
   dispatch({ type: 'UNFOLLOW_PLAYER', payload: updatedFollowing })
+}
+
+const updateResults = players => {
+  const following = JSON.parse(localStorage.following) || []
+  const newPlayers = players.slice(0)
+  newPlayers.forEach(player => {
+    if (following.includes(player.id)) {
+      player.isFollowing = true
+    }
+  })
+  return newPlayers
 }
