@@ -12,18 +12,10 @@ const PlayerCard = ({ player }) => (
     </div>
     <div className="player-card__stats">
       <NameBadge {...player} />
-      <PrimaryStats
-        points={player.points}
-        assists={player.assists}
-        rebounds={player.rebounds}
-      />
-      <SecondaryStats
-        steals={player.steals}
-        blocks={player.blocks}
-        minutes={player.minutes}
-        teamColor={player.teamColor}
-        turnovers={player.turnovers}
-      />
+    </div>
+    <div className="player-card__stats u-mb-16">
+      <PrimaryStats {...player} />
+      <SecondaryStats {...player} />
     </div>
   </div>
 )
